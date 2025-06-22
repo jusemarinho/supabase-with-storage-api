@@ -178,7 +178,7 @@ services:
     routes:
       - name: storage-route
         paths:
-          - /api/platform/storage
+          - /api/platform/storage/default
         strip_path: true
 
   # ## Edge Functions routes
