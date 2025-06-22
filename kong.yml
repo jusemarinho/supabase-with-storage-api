@@ -173,16 +173,13 @@ services:
             - admin
             - anon
   # ## Storage routes: the storage server manages its own auth
-  - name: storage-v1
-    url: http://storage-api.railway.internal:5000/
+  - name: storage-api
+    url: https://storage-api-staging.up.railway.app
     routes:
-      - name: storage-v1-all
-        strip_path: true
+      - name: storage-route
         paths:
-          - /storage/v1
-          - /storage/v1/
-    plugins:
-      - name: cors
+          - /api/platform/storage
+        strip_path: true
 
   # ## Edge Functions routes
   # - name: functions-v1
